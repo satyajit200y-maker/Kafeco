@@ -1,0 +1,52 @@
+import { GalleryImage } from '../types.ts';
+
+export const GALLERY_IMAGES: GalleryImage[] = [
+  {
+    id: 'g1',
+    title: 'Manual Pour Over Station',
+    category: 'coffee',
+    url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Barista performing precision pour over with Hario V60 dripper',
+    caption: 'Every morning starts with dialed-in single origin extractions at our pour-over bar.',
+  },
+  {
+    id: 'g2',
+    title: 'Freshly Baked Croissants',
+    category: 'bakery',
+    url: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Golden flaky artisan croissants resting on wooden cooling rack',
+    caption: 'Laminated French butter pastry, baked twice daily in Kozhencherry.',
+  },
+  {
+    id: 'g3',
+    title: 'Warm Sunlit Seating',
+    category: 'ambience',
+    url: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Sunlit interior of cafe with wooden tables, indoor greenery and warm light',
+    caption: 'Designed with natural teak wood, lush greenery, and calm acoustics for reading or work.',
+  },
+  {
+    id: 'g4',
+    title: 'Velvety Latte Art',
+    category: 'coffee',
+    url: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Swan latte art poured with silk microfoam in ceramic cup',
+    caption: 'Microfoam texturing crafted on our dual-boiler espresso machine.',
+  },
+  {
+    id: 'g5',
+    title: 'Community & Conversations',
+    category: 'community',
+    url: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Friends enjoying coffee and conversation at long wooden communal table',
+    caption: 'A gathering sanctuary for neighbors, travelers, writers, and thinkers.',
+  },
+  {
+    id: 'g6',
+    title: 'Wild-Yeast Sourdough',
+    category: 'bakery',
+    url: 'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=1000&q=80',
+    alt: 'Crusty loaf of sourdough bread with open scoring and golden blistered crust',
+    caption: '36-hour slow fermented country loaves made with simple pure ingredients.',
+  },
+];

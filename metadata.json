@@ -1,0 +1,6 @@
+{
+  "name": "Kafeco — Artisan Café & Roastery",
+  "description": "Specialty coffee shop, artisan bakery, and gathering space in Kozhencherry, Kerala featuring single-origin brews, fresh bakes, and local hospitality.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
