@@ -6,7 +6,11 @@ import { trackAnalyticsEvent } from '../utils/analytics.ts';
 import { SectionHeading } from './Buttons.tsx';
 
 export const FeaturedCards: React.FC = () => {
-  const featured = MENU_ITEMS.filter((item) => item.isPopular).slice(0, 4);
+  // Curate signature favorites including our authentic blackboard Aval Milk special
+  const priorityIds = ['cb-aval-milk', 'c1', 'b1', 'd1'];
+  const featured = priorityIds
+    .map((id) => MENU_ITEMS.find((item) => item.id === id))
+    .filter((item): item is (typeof MENU_ITEMS)[0] => Boolean(item));
 
   const handleCardClick = (itemName: string) => {
     trackAnalyticsEvent('featured_item_click', { item: itemName });
@@ -36,6 +40,7 @@ export const FeaturedCards: React.FC = () => {
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[11px] font-bold text-[#7E5738] shadow-xs">
                   <Sparkles className="w-3 h-3 text-[#C67937]" />

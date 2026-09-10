@@ -3,6 +3,7 @@ import { Coffee, MapPin, Sparkles, Navigation, ArrowDown, ShieldCheck, Heart } f
 import { CAFE_INFO, getCafeStatus, buildWhatsAppUrl } from '../data/cafeInfo.ts';
 import { PrimaryButton, SecondaryButton, WhatsAppButton } from './Buttons.tsx';
 import { trackAnalyticsEvent } from '../utils/analytics.ts';
+import { REAL_CAFE_ASSETS } from '../assets/realCafeImages.ts';
 
 export const Hero: React.FC = () => {
   const status = getCafeStatus();
@@ -109,15 +110,16 @@ export const Hero: React.FC = () => {
           {/* Right Column: Hero Visual Showcase */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Feature Image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] group">
+              {/* Main Feature Image - Real Kafeco Storefront */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] group bg-[#2C1D14]">
                 <img
-                  src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85"
-                  alt="Barista brewing single origin pour over coffee at Kafeco Kozhencherry"
+                  src={REAL_CAFE_ASSETS.storefront}
+                  alt="Kafeco Kozhencherry storefront with illuminated neon sign, turquoise French facade, and canopy of warm Edison bulbs"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="eager"
+                  referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/80 via-[#1A110B]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent to-black/20" />
 
                 {/* Overlay Card Inside Image */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-[#EADFD5] shadow-lg">
@@ -127,32 +129,35 @@ export const Hero: React.FC = () => {
                         <Coffee className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="text-xs font-bold uppercase tracking-wider text-[#7E5738]">
-                          Freshly Pulled Today
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-[#7E5738]">
+                          Artisan Café & Roastery
                         </div>
                         <div className="font-serif text-sm font-bold text-[#1A110B]">
-                          Wayanad Estate Reserve V60
+                          Kafeco · Kozhencherry, Kerala
                         </div>
                       </div>
                     </div>
-                    <span className="text-sm font-serif font-bold text-[#C67937]">
-                      ₹230
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                      Open Today
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Badge 1: Artisan Baker */}
-              <div className="absolute -top-4 -left-4 sm:-left-6 p-3.5 rounded-2xl bg-white shadow-xl border border-[#EADFD5] flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#FAF4ED] flex items-center justify-center text-[#C67937]">
-                  <Sparkles className="w-5 h-5" />
-                </div>
+              {/* Floating Badge 1: Real Daily Special Preview */}
+              <div className="absolute -top-5 -left-4 sm:-left-6 p-2.5 sm:p-3 rounded-2xl bg-white shadow-xl border border-[#EADFD5] flex items-center gap-3 max-w-[250px]">
+                <img
+                  src={REAL_CAFE_ASSETS.avalMilk}
+                  alt="Kafeco Blackboard Special Aval Milk"
+                  className="w-12 h-12 rounded-xl object-cover border border-[#EADFD5]"
+                  referrerPolicy="no-referrer"
+                />
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#7E5738]">
-                    Daily 6:30 AM
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-[#C67937]">
+                    Today's Special
                   </div>
-                  <div className="text-xs font-bold text-[#1A110B]">
-                    Fresh Croissants & Sourdough
+                  <div className="text-xs font-bold text-[#1A110B] leading-tight">
+                    Special Aval Milk & Shakes
                   </div>
                 </div>
               </div>

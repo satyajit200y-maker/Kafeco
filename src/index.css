@@ -14,14 +14,36 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
   body {
     font-family: var(--font-sans);
     color: #261B14;
     background-color: #FAF7F2;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, .font-display {
     font-family: var(--font-serif);
+  }
+
+  /* Hide scrollbar ("slide bar") from right side across all browsers */
+  * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    background: transparent !important;
   }
 }
 

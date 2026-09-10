@@ -3,6 +3,7 @@ import { MapPin, Navigation, Clock, Phone, MessageCircle, ExternalLink, Compass,
 import { CAFE_INFO, getCafeStatus, buildWhatsAppUrl } from '../data/cafeInfo.ts';
 import { trackAnalyticsEvent } from '../utils/analytics.ts';
 import { SectionHeading, WhatsAppButton, PrimaryButton, SecondaryButton } from './Buttons.tsx';
+import { REAL_CAFE_ASSETS } from '../assets/realCafeImages.ts';
 
 export const LocationSection: React.FC = () => {
   const status = getCafeStatus();
@@ -180,6 +181,29 @@ export const LocationSection: React.FC = () => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Visual Storefront Landmark Guide */}
+            <div className="bg-white rounded-3xl p-5 border border-[#EADFD5] shadow-xs flex items-center gap-4">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border border-[#EADFD5] bg-[#2C1D14]">
+                <img
+                  src={REAL_CAFE_ASSETS.storefront}
+                  alt="Kafeco Turquoise Entrance"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#C67937]">
+                  Street Landmark
+                </span>
+                <h5 className="font-serif text-sm font-bold text-[#1A110B] mt-0.5">
+                  Spot the Turquoise Glass Facade
+                </h5>
+                <p className="text-xs text-[#5D4E45] mt-1 leading-relaxed">
+                  Look for our illuminated neon sign and canopy of warm Edison bulbs on SH-07, 250m before Kozhencherry bridge.
+                </p>
               </div>
             </div>
           </div>

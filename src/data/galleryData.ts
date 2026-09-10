@@ -1,6 +1,39 @@
 import { GalleryImage } from '../types.ts';
+import { REAL_CAFE_ASSETS } from '../assets/realCafeImages.ts';
 
 export const GALLERY_IMAGES: GalleryImage[] = [
+  {
+    id: 'real-storefront',
+    title: 'The Turquoise Storefront Entrance',
+    category: 'ambience',
+    url: REAL_CAFE_ASSETS.storefront,
+    alt: 'Kafeco illuminated entrance in Kozhencherry with turquoise French glass doors and canopy of warm Edison bulbs',
+    caption: 'Our iconic turquoise facade and canopy of warm Edison bulbs welcoming coffee lovers on Main Central Road, Kozhencherry.',
+  },
+  {
+    id: 'real-brick-wall',
+    title: 'Exposed White Brick Gallery Wall',
+    category: 'ambience',
+    url: REAL_CAFE_ASSETS.brickGallery,
+    alt: 'White brick gallery wall adorned with vintage framed travel photography and globe pendant lights',
+    caption: 'White brick walls adorned with curated travel frames, vintage clock, and amber filament bulbs for intimate conversations.',
+  },
+  {
+    id: 'real-mirror-nook',
+    title: 'Botanical Greenery Mirror Nook',
+    category: 'ambience',
+    url: REAL_CAFE_ASSETS.mirrorCorner,
+    alt: 'Aesthetic round mirror framed by cascading greenery and warm incandescent glow',
+    caption: 'A quiet green corner wrapped in cascading foliage and soft reflections — an instant favorite for quiet mornings.',
+  },
+  {
+    id: 'real-aval-milk',
+    title: 'Signature Kafeco Aval Milk',
+    category: 'community',
+    url: REAL_CAFE_ASSETS.avalMilk,
+    alt: 'Two tall dessert glasses of chilled Kerala Aval Milk with roasted flakes and pomegranate at Kafeco',
+    caption: 'Central Travancore comfort in a glass: thick creamy milk, sweet bananas, roasted aval, crunchy cornflakes, and pomegranate.',
+  },
   {
     id: 'g1',
     title: 'Manual Pour Over Station',

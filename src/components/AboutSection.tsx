@@ -3,6 +3,7 @@ import { Coffee, ShieldCheck, Heart, Sparkles, MapPin, Award } from 'lucide-reac
 import { SectionHeading, PrimaryButton, WhatsAppButton } from './Buttons.tsx';
 import { CAFE_INFO, buildWhatsAppUrl } from '../data/cafeInfo.ts';
 import { trackAnalyticsEvent } from '../utils/analytics.ts';
+import { REAL_CAFE_ASSETS } from '../assets/realCafeImages.ts';
 
 export const AboutSection: React.FC = () => {
   const pillars = [
@@ -32,16 +33,17 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="py-20 sm:py-28 bg-[#F3ECE2]/60 border-t border-[#E8DDD2] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Visual Showcase */}
+          {/* Visual Showcase - Real Kafeco Interior */}
           <div className="lg:col-span-6 relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/5]">
+                <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/5] group bg-[#2C1D14]">
                   <img
-                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
-                    alt="Manual coffee dripper and fresh beans at Kafeco"
-                    className="w-full h-full object-cover"
+                    src={REAL_CAFE_ASSETS.brickGallery}
+                    alt="Authentic white brick gallery wall with framed travel prints and globe lighting at Kafeco Kozhencherry"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-5 rounded-2xl bg-white border border-[#EADFD5] shadow-xs">
@@ -49,10 +51,10 @@ export const AboutSection: React.FC = () => {
                     100%
                   </span>
                   <div className="text-xs font-semibold text-[#1A110B] mt-0.5">
-                    Traceable Estate Coffee
+                    Authentic Roastery Spaces
                   </div>
                   <p className="text-[11px] text-[#7E5738] mt-1">
-                    Direct single-origin sourcing from Kerala & Karnataka highlands.
+                    Warm amber globe lighting, curated vintage gallery frames, and cozy teak seating.
                   </p>
                 </div>
               </div>
@@ -66,15 +68,16 @@ export const AboutSection: React.FC = () => {
                     "Coffee is a ritual of pause."
                   </div>
                   <p className="text-[11px] text-[#D8C7B5] mt-1">
-                    Honoring every hand from farm to extraction.
+                    A peaceful sanctuary right by Kozhencherry bridge.
                   </p>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/5]">
+                <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/5] group bg-[#2C1D14]">
                   <img
-                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
-                    alt="Warm communal wooden seating at Kafeco Kozhencherry"
-                    className="w-full h-full object-cover"
+                    src={REAL_CAFE_ASSETS.mirrorCorner}
+                    alt="Botanical mirror corner with cascading green foliage and warm incandescent glow at Kafeco"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>

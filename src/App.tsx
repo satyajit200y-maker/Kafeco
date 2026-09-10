@@ -18,7 +18,6 @@ import { LocationSection } from './components/LocationSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { MobileStickyBar } from './components/MobileStickyBar.tsx';
-import { CookieManager } from './components/CookieManager.tsx';
 import { LegalModals } from './components/LegalModals.tsx';
 import { ProjectBlueprintModal } from './components/ProjectBlueprintModal.tsx';
 
@@ -108,9 +107,6 @@ export default function App() {
 
         {/* Mobile Sticky Quick Action Bar */}
         <MobileStickyBar />
-
-        {/* Section 18 Cookies & Consent Banner & Modal */}
-        <CookieManager />
 
         {/* Section 19 & 20 Privacy Policy and Terms Modals */}
         <LegalModals

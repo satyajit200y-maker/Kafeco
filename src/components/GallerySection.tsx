@@ -66,13 +66,19 @@ export const GallerySection: React.FC = () => {
                 alt={item.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A110B]/85 via-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
               {/* Hover overlay content */}
               <div className="absolute inset-0 p-5 flex flex-col justify-between text-white">
-                <div className="flex justify-end">
-                  <span className="p-2 rounded-full bg-black/40 backdrop-blur-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex justify-between items-start">
+                  {item.id.startsWith('real-') && (
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide bg-[#C67937] text-white shadow-xs">
+                      Authentic Kafeco Space
+                    </span>
+                  )}
+                  <span className="p-2 rounded-full bg-black/40 backdrop-blur-xs text-white opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
                     <Maximize2 className="w-4 h-4" />
                   </span>
                 </div>
@@ -117,6 +123,7 @@ export const GallerySection: React.FC = () => {
                 src={activeImage.url}
                 alt={activeImage.alt}
                 className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-6 bg-[#24170E] text-white">

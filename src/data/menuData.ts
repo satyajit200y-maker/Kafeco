@@ -1,4 +1,5 @@
 import { Category, MenuItem } from '../types.ts';
+import { REAL_CAFE_ASSETS } from '../assets/realCafeImages.ts';
 
 export const CATEGORIES: Category[] = [
   {
@@ -121,6 +122,18 @@ export const MENU_ITEMS: MenuItem[] = [
   },
 
   // Cold Brews & Coolers
+  {
+    id: 'cb-aval-milk',
+    name: 'Kafeco Special Aval Milk',
+    category: 'coolers',
+    price: 160,
+    description: 'Central Travancore iconic roastery special: creamy thick chilled milk infused with sweet mashed banana, roasted beaten rice (aval), crunchy cornflakes, cashews, and fresh pomegranate.',
+    ingredients: ['Roasted Aval (flattened rice)', 'Chilled cream milk', 'Banana mash', 'Roasted cashew & nuts', 'Crispy cornflakes', 'Pomegranate seeds'],
+    dietary: ['veg', 'chef-special'],
+    isPopular: true,
+    image: REAL_CAFE_ASSETS.avalMilk,
+    notes: 'Kafeco Daily Blackboard Special — served in tall dessert glasses with spoons and paper straws',
+  },
   {
     id: 'cb1',
     name: 'Kerala Spiced Nitro Cold Brew',
